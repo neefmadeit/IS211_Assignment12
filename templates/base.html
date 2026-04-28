@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Test{% endblock %}</title>
+    <style>
+        nav a {
+            display: inline-block;
+            padding: 8px 12px;
+            margin-right: 8px;
+            background: blue;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/student/add">Add Student</a>
+    <a href="/quiz/add">Add Quiz</a>
+    <a href="/result/add">Add Result</a>
+    <a href="/logout">Logout</a>
+</nav>
+
+<hr>
+
+{% block content %}{% endblock %}
+
+</body>
+</html>

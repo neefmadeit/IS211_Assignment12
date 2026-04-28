@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Students</h2>
+
+<ul>
+{% for s in students %}
+    <li>
+        {{ s[1] }} {{ s[2] }} -
+        <a href="/student/{{ s[0] }}">View</a>
+    </li>
+{% endfor %}
+</ul>
+
+<h2>Quizzes</h2>
+<ul>
+{% for q in quizzes %}
+    <li>{{ q[1] }}</li>
+{% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,24 @@
+
+DROP TABLE IF EXISTS students;
+DROP TABLE IF EXISTS quizzes;
+DROP TABLE IF EXISTS results;
+
+CREATE TABLE students(
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ first_name TEXT,
+ last_name TEXT
+);
+
+CREATE TABLE quizzes(
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ subject TEXT,
+ num_questions INTEGER,
+ quiz_date TEXT
+);
+
+CREATE TABLE results(
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ student_id INTEGER,
+ quiz_id INTEGER,
+ score INTEGER
+);
